@@ -1,3 +1,13 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Anarchy Legacy Bot online 💀");
+});
+
+app.listen(3000, () => {
+  console.log("Web server rodando");
+});
 const { Client, GatewayIntentBits } = require("discord.js");
 require("dotenv").config();
 
