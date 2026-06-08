@@ -1,8 +1,6 @@
 const coins = new Map();
 
 module.exports = {
-  name: "money",
-
   execute(message, args) {
     const user = message.author.id;
 
@@ -11,7 +9,6 @@ module.exports = {
     if (args[0] === "daily") {
       const reward = Math.floor(Math.random() * 200) + 50;
       coins.set(user, coins.get(user) + reward);
-
       return message.reply(`💰 você ganhou ${reward} coins`);
     }
 

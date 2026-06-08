@@ -1,17 +1,14 @@
 module.exports = {
-  name: "chaos",
-
   execute(message) {
     const events = [
-      "💥 Explosão global de coins!",
+      "💥 Explosão de coins global!",
       "⚔️ PvP liberado por 10 minutos!",
-      "👑 Novo rei do servidor escolhido!",
-      "💀 Todos perderam 25% das coins!",
-      "🎁 Drop lendário apareceu no chat!"
+      "👑 Novo rei do servidor!",
+      "💀 Todos perderam dinheiro!",
+      "🎁 Drop raro apareceu!"
     ];
 
     const event = events[Math.floor(Math.random() * events.length)];
-
-    message.channel.send(`🔥 **ANARCHY EVENT:** ${event}`);
+    message.channel.send("🔥 " + event);
   }
 };

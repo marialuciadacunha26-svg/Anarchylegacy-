@@ -1,15 +1,13 @@
-let warMode = false;
+let war = false;
 
 module.exports = {
-  name: "war",
-
   execute(message) {
-    warMode = !warMode;
+    war = !war;
 
-    if (warMode) {
-      message.channel.send("⚔️ GUERRA ATIVADA! PvP e caos liberados!");
+    if (war) {
+      message.channel.send("⚔️ GUERRA ATIVADA!");
     } else {
-      message.channel.send("🕊️ Guerra finalizada.");
+      message.channel.send("🕊️ Guerra desativada.");
     }
   }
 };
